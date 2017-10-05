@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>OCT 3 Class Code</title>
+        <title>OCT 5 Class Code</title>
 
         <!--set link to script file -->
         <script src ="Scripts/main.js"></script>
@@ -12,17 +12,24 @@
     </head>
 <body>
 
-<h1>Oct 3 Class Code</h1>
+<h1>Oct 5 Class Code</h1>
 <p>Lets see if our button works</p>
 <!--Webpage button -->
 <button onclick="test();">Click Me</button>
 <button onclick="readText();">Read Text</button>
 <br>
 <br>
-<!--Let's try some text boxes for Input and Output-->
-<p> GetTextInput     GetText OutPut</p>
-<input id = "stuff" value="Get Value">
-<input id = "stuff2" value="">
+Input:
+<br>
+<textarea name="InputBox" id="inputBox1" cols="40" rows="8"></textarea>
+<br><br>
+Output:
+<br>
+<textarea name="OutputBox" id="outputBox1" cols="40" rows="8"></textarea>
+<br><br>
+<button onclick="copyInputToOutput();">Copy Input to Output</button>
+
+
 
 <script>
     let x;
