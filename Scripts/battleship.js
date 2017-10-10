@@ -1,4 +1,4 @@
-/* CIS-135JS Ken Chapman 
+/* CIS-133JS Ken Chapman 
 BattlelShip Game Chapter 2 of HeadStart JS
 Modified with let Function instead of VAR
 Converting to a Function
@@ -30,7 +30,7 @@ while (isSunk == false) {
 		if (guess == location1 || guess == location2 || guess == location3) {
 			alert("HIT!");
 			hits = hits + 1;
-			if (hits == 3) {
+			if (hits === 3) {
 				isSunk = true;
 				alert("You sank my battleship!");
             }
