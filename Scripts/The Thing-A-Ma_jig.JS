@@ -29,6 +29,9 @@ function display (output) {
 
 }
 
-var clunkCounter =0;
-thinkamajig(5);
-console.log(clunkCounter);
+function main (){
+    var clunkCounter =0;
+    thinkamajig(5);
+    console.log(clunkCounter);
+}
+
