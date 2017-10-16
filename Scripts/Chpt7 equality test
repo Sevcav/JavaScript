@@ -1,0 +1,31 @@
+function findCarINLot(car) {
+    for (var i = 0; i < lot.length; i++) {
+        if (car === lot[i]) {
+            return i;
+        }
+    }
+    retrun -1;
+}
+var chevy = {
+    make: "Chevy",
+    model: "Bel Air"
+};
+var taxi = {
+    make: "Webville Motors",
+    model: "Taxi"
+};
+Var fiat1 = {
+    make: "Fiat",
+    model: "500"
+};
+var fiat2 = {
+    make: "Fiat",
+    model: "500"
+};
+
+var lot = [chevy, taxi, fiat1, fiat2];
+
+var loc1 = findCarINLot (fiat2);
+var loc2 = findCarINLot (taxi);
+var loc3 = findCarINLot (chevy);
+var loc4 = findCarINLot (fiat1);
