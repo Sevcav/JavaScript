@@ -33,8 +33,67 @@ function swapValues() {
 
 }
 
+function createNumberString(startNumber, howMany, separator = '\n') {
+    //if (!separator) { // default to \n
+        //separator = '\n';    
+    
+    let result = "";
+    let loopCounter = startNumber;
+    let maxNumber = startNumber + howMany;
 
+    while (loopCounter < maxNumber) {
+        result = result + string(loopCounter) + separator;
+        ++loopCounter;   // add one to loopCounter                            
+    }
 
+    return result;
+}
+
+// Create a list of numbers
+// Input: How many numbers
+//        Where to start the number string
+//        What separates the values
+// Output: A string of the numbers separated
+//         by line breaks '\n'
+function createNumberString(startNumber, howMany, separator) {
+    if (!separator){  // default to \n
+        separator = '\n';    
+    }
+    let result = "";
+    let loopCounter = startNumber;
+    let maxNumber = startNumber + howMany;
+
+    while (loopCounter < maxNumber) {
+        result = result + String(loopCounter) + separator;
+        ++loopCounter;   // add one to loopCounter                            
+    }
+
+    return result;
+}
+
+// Print the numbers from 0..howmany to a text area
+// Input: How many numbers to print
+// Output: none
+function outputNumbers(howMany) {
+    let textBox1 = document.getElementById("textarea01");
+    textBox1.value = ""; // clear the text box
+
+    // for looping structure...
+    //  initialize    test      increment
+    /*
+    for (let i = 0; i < howMany; i += 1) {
+        textBox1.value = textBox1.value + i + '\n';
+    }
+    */
+    textBox1.value = createNumberString(1, howMany);
+}
+
+// Call the outputNumbers() function
+// Input: none
+// Output: none
+function textAreaExample() {
+    outputNumbers(10);
+}
 
 
 
