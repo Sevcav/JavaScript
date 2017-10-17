@@ -95,5 +95,56 @@ function textAreaExample() {
     outputNumbers(10);
 }
 
+//Clear textarea "texarea01"
+function clrTxt(){
+    let textarea = document.getElementById("textarea01");
+    textarea.value = '';
+};
+
+// Print (....)
+// Print the argument to the textarea "textarea01"
+// NO LINE Break
+function print(str, id) {
+    if (id === undefined || id === null){
+        id = "textarea01"
+    }
+    let textarea = getEID("textarea01");
+    textarea.value = textarea.value  + str;
+};
+
+// Print (....)
+// Print the argument to the textarea "textarea01"
+// or to a specific element with value as defined by ID parameter
+// or to the elment 
+// NO LINE Break
+function printwBreak(str, id) {
+    if (str === undefined || str === null) {
+    str = '';
+}
+    print(str + '\n', id);
+};
+
+//get HTML element from the document by using the element id property
+
+function getEID(id){
+    return document.getElementById(id);
+;}
+
+// Get the text (the valey propert for an 
+// input box or a textare given the HTML ID
+function getEVal(id){
+    return getEID (id).value;
+;}
 
 
+
+function testPrint() {
+    clrTxt();
+    print("Hello World", "texbox01");
+    printwBreak(", have a nice day.");
+    printwBreak();
+    printwBreak("See you Later.");
+    let txt  = getEVal("textbox01");
+    printwBreak(txt);
+    println("yes indeed", "textbox02");
+};
