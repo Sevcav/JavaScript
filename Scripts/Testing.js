@@ -96,8 +96,12 @@ function textAreaExample() {
 }
 
 //Clear textarea "texarea01"
-function clrTxt(){
-    let textarea = document.getElementById("textarea01");
+function clrTxt(id){
+    if (id === undefined || id === null){
+        id = "textarea01"
+    }
+    let text
+    let textarea = getEID(id);
     textarea.value = '';
 };
 
@@ -108,7 +112,7 @@ function print(str, id) {
     if (id === undefined || id === null){
         id = "textarea01"
     }
-    let textarea = getEID("textarea01");
+    let textarea = getEID(id);
     textarea.value = textarea.value  + str;
 };
 
@@ -121,6 +125,7 @@ function printwBreak(str, id) {
     if (str === undefined || str === null) {
     str = '';
 }
+
     print(str + '\n', id);
 };
 
@@ -130,14 +135,14 @@ function getEID(id){
     return document.getElementById(id);
 ;}
 
-// Get the text (the valey propert for an 
-// input box or a textare given the HTML ID
+// Get the text (the value property for an 
+// input box or a textarea given the HTML ID
 function getEVal(id){
     return getEID (id).value;
 ;}
 
 
-
+// Pass two parameters, first is string, second is the ElementID; default ID is textarea01
 function testPrint() {
     clrTxt();
     print("Hello World", "texbox01");
