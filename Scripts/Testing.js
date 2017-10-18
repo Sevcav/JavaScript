@@ -100,7 +100,6 @@ function clrTxt(id){
     if (id === undefined || id === null){
         id = "textarea01"
     }
-    let text
     let textarea = getEID(id);
     textarea.value = '';
 };
@@ -142,14 +141,14 @@ function getEVal(id){
 ;}
 
 
-// Pass two parameters, first is string, second is the ElementID; default ID is textarea01
+// Pass two parameters to Print Functions, first is string, second is the ElementID; default ID is textarea01
 function testPrint() {
     clrTxt();
-    print("Hello World", "texbox01");
+    print("Hello World");
     printwBreak(", have a nice day.");
     printwBreak();
     printwBreak("See you Later.");
     let txt  = getEVal("textbox01");
     printwBreak(txt);
-    println("yes indeed", "textbox02");
+    printwBreak("yes indeed", "textbox02");
 };
