@@ -25,12 +25,12 @@ function BBGAME() {
 	let location2 = location1 + 1;
 	let location3 = location1 + 2;
 	let guess;
-	let prevguess = []; //Build an Array of previous Guesses
+	let prevguess = []; //Build an Array of previous totGuesses
 	let hits = 0;
-	let guesses = 0;
+	let totGuesses = 0;
 	let isSunk = false;
 
-	// Issue with choosing the same number that scored a hit causing Sunk (array of previous guesses?)
+	// Check for incorrect entry or previous guess of location already made
 	while (isSunk == false) {
 		guess = prompt("Ready, aim, fire! (Enter a number from 0-6):");
 
@@ -41,7 +41,7 @@ function BBGAME() {
 			if (prevguess.includes(guess)) {
 				alert("That cell has already been guessed before!")
 			} else {
-				++guesses; 					// Increment guesses by 1
+				++totGuesses; 					// Increment totGuesses by 1
 				prevguess.push(guess); 		// Add guess to prevguess array
 
 				if (guess == location1 || guess == location2 || guess == location3) {
@@ -59,8 +59,8 @@ function BBGAME() {
 		}
 	}
 
-	let stats = "You took " + guesses + " guesses to sink the battleship, " +
-		"which means your shooting accuracy was " + (3 / guesses);
+	let stats = "You took " + totGuesses + " Guesses to sink the battleship, " +
+		"which means your shooting accuracy was " + (3 / totGuesses);
 
 	alert(stats);
 }
