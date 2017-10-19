@@ -3,24 +3,29 @@
     v 0.001
     
     NOTE: Exploratory Testing of lessons in class
+HTML is KenTestPage
+tb = alias for textbox
+ta = alias for texarea
+
+
 */
 
 // Write some code to retrieve values from a webpage textarea
 
 function readText() {
-    let readTextBox01 = document.getElementById("textbox01");
-    let readTextValue01 = readTextBox01.value;
+    let readtb01 = document.getElementById("tb01");
+    let readTextValue01 = readtb01.value;
     alert("Value in Textbox 01 is " + readTextValue01);
-    let readTextBox02 = document.getElementById("textbox02");
-    let readTextValue02 = readTextBox02.value;
+    let readtb02 = document.getElementById("tb02");
+    let readTextValue02 = readtb02.value;
     alert("Value in Textbox 02 is " + readTextValue02);
 }
 
 
 function swapValues() {
-    let textObject1 = document.getElementById("textbox01");
+    let textObject1 = document.getElementById("tb01");
     let textValue1 = textObject1.value;
-    let textObject2 = document.getElementById("textbox02");
+    let textObject2 = document.getElementById("tb02");
     let textValue2 = textObject2.value;
 
     // alert(textValue1);
@@ -75,7 +80,7 @@ function createNumberString(startNumber, howMany, separator) {
 // Input: How many numbers to print
 // Output: none
 function outputNumbers(howMany) {
-    let textBox1 = document.getElementById("textarea01");
+    let textBox1 = document.getElementById("ta01");
     textBox1.value = ""; // clear the text box
 
     // for looping structure...
@@ -98,25 +103,25 @@ function textAreaExample() {
 //Clear textarea "texarea01"
 function clrTxt(id) {
     if (id === undefined || id === null) {
-        id = "textarea01"
+        id = "ta01"
     }
     let textarea = getEID(id);
     textarea.value = '';
 };
 
 // Print (....)
-// Print the argument to the textarea "textarea01"
+// Print the argument to the textarea "ta01"
 // NO LINE Break
 function print(str, id) {
     if (id === undefined || id === null) {
-        id = "textarea01"
+        id = "ta01"
     }
     let textarea = getEID(id);
     textarea.value = textarea.value + str;
 };
 
 // Print (....)
-// Print the argument to the textarea "textarea01"
+// Print the argument to the textarea "ta01"
 // or to a specific element with value as defined by ID parameter
 // or to the elment 
 // NO LINE Break
@@ -141,14 +146,14 @@ function getEVal(id) {
 }
 
 
-// Pass two parameters to Print Functions, first is string, second is the ElementID; default ID is textarea01
+// Pass two parameters to Print Functions, first is string, second is the ElementID; default ID is textarea ta01
 function testPrint() {
     clrTxt();
     print("Hello World");
     printwBreak(", have a nice day.");
     printwBreak();
     printwBreak("See you Later.");
-    let txt = getEVal("textbox01");
+    let txt = getEVal("tb01");
     printwBreak(txt);
-    printwBreak("yes indeed", "textbox02");
+    printwBreak("yes indeed", "tb02");
 };
