@@ -7,7 +7,7 @@
 
 // Write some code to retrieve values from a webpage textarea
 
-function readText (){
+function readText() {
     let readTextBox01 = document.getElementById("textbox01");
     let readTextValue01 = readTextBox01.value;
     alert("Value in Textbox 01 is " + readTextValue01);
@@ -35,15 +35,15 @@ function swapValues() {
 
 function createNumberString(startNumber, howMany, separator = '\n') {
     //if (!separator) { // default to \n
-        //separator = '\n';    
-    
+    //separator = '\n';    
+
     let result = "";
     let loopCounter = startNumber;
     let maxNumber = startNumber + howMany;
 
     while (loopCounter < maxNumber) {
         result = result + string(loopCounter) + separator;
-        ++loopCounter;   // add one to loopCounter                            
+        ++loopCounter; // add one to loopCounter                            
     }
 
     return result;
@@ -56,8 +56,8 @@ function createNumberString(startNumber, howMany, separator = '\n') {
 // Output: A string of the numbers separated
 //         by line breaks '\n'
 function createNumberString(startNumber, howMany, separator) {
-    if (!separator){  // default to \n
-        separator = '\n';    
+    if (!separator) { // default to \n
+        separator = '\n';
     }
     let result = "";
     let loopCounter = startNumber;
@@ -65,7 +65,7 @@ function createNumberString(startNumber, howMany, separator) {
 
     while (loopCounter < maxNumber) {
         result = result + String(loopCounter) + separator;
-        ++loopCounter;   // add one to loopCounter                            
+        ++loopCounter; // add one to loopCounter                            
     }
 
     return result;
@@ -96,8 +96,8 @@ function textAreaExample() {
 }
 
 //Clear textarea "texarea01"
-function clrTxt(id){
-    if (id === undefined || id === null){
+function clrTxt(id) {
+    if (id === undefined || id === null) {
         id = "textarea01"
     }
     let textarea = getEID(id);
@@ -108,11 +108,11 @@ function clrTxt(id){
 // Print the argument to the textarea "textarea01"
 // NO LINE Break
 function print(str, id) {
-    if (id === undefined || id === null){
+    if (id === undefined || id === null) {
         id = "textarea01"
     }
     let textarea = getEID(id);
-    textarea.value = textarea.value  + str;
+    textarea.value = textarea.value + str;
 };
 
 // Print (....)
@@ -122,23 +122,23 @@ function print(str, id) {
 // NO LINE Break
 function printwBreak(str, id) {
     if (str === undefined || str === null) {
-    str = '';
-}
+        str = '';
+    }
 
     print(str + '\n', id);
 };
 
 //get HTML element from the document by using the element id property
 
-function getEID(id){
-    return document.getElementById(id);
-;}
+function getEID(id) {
+    return document.getElementById(id);;
+}
 
 // Get the text (the value property for an 
 // input box or a textarea given the HTML ID
-function getEVal(id){
-    return getEID (id).value;
-;}
+function getEVal(id) {
+    return getEID(id).value;;
+}
 
 
 // Pass two parameters to Print Functions, first is string, second is the ElementID; default ID is textarea01
@@ -148,7 +148,7 @@ function testPrint() {
     printwBreak(", have a nice day.");
     printwBreak();
     printwBreak("See you Later.");
-    let txt  = getEVal("textbox01");
+    let txt = getEVal("textbox01");
     printwBreak(txt);
     printwBreak("yes indeed", "textbox02");
 };
